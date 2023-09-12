@@ -1,22 +1,14 @@
-clc
 
-f = @(x) x^2-2;
+tol = 10^-6;
+n = 100;
 
-a = input('lower limit');
-b = input('upper limit');
+f = @(x) x*x-2;
 
-x0 = (a+b)/2;
+x0 = 2;
 
-tol = input('tolerance');
-n = input('iterations');
-
-if f(a)*f(b)>0
-    disp("Root does not exist");
-else
     for i=1:n
         x1 = f(x0);
         if abs(x1-x0) < tol
-            disp(x0)
             break
         else
             x0 = x1;
@@ -25,4 +17,3 @@ else
     end
     
     disp(x0);
-end
