@@ -11,6 +11,10 @@ g = @(x) x-(f(x)/df(x));
 x0 = (a+b)/2;
 
 for i =1:n
+
+    if abs(g(x0) == 0)
+        disp('newton method fails')
+    end
     x1 = g(x0);
 
     if abs(x0-x1)<tol
