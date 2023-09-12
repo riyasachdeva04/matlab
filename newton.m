@@ -14,6 +14,7 @@ for i =1:n
 
     if abs(g(x0) == 0)
         disp('newton method fails')
+        break
     end
     x1 = g(x0);
 
