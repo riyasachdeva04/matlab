@@ -19,7 +19,7 @@ else
             a = c;
         end
         
-        if abs(a-b)<=tol
+        if abs(a-b)<tol
             break
         end
     end
